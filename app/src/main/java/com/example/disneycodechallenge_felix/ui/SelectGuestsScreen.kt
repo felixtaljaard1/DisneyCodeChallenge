@@ -1,9 +1,15 @@
 package com.example.disneycodechallenge_felix.ui
 
+import android.preference.PreferenceActivity
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.*
+import androidx.compose.material.MaterialTheme.colors
 import androidx.compose.material.SnackbarDefaults.backgroundColor
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
@@ -18,6 +24,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.disneycodechallenge_felix.ui.theme.white
 
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun SelectGuestsScreen() {
     Scaffold(
@@ -39,96 +46,331 @@ fun SelectGuestsScreen() {
                 }
             )
 
+        },
+        bottomBar = {
+            BottomAppBar(
+                backgroundColor = white
+            ) {
+                Button(
+                    onClick = {
+                        null
+                    },
+                    colors = ButtonDefaults.buttonColors(
+                        backgroundColor = Color.Blue,
+                        contentColor = white
+                    ),
+                    modifier = Modifier
+                        .fillMaxWidth(),
+                    shape = CircleShape
+                ) {
+                    Text(
+                        text = "Continue",
+                        fontWeight = FontWeight.Bold,
+                        textAlign = TextAlign.Center
+                    )
+                }
+            }
         }
     ) {
-        Column() {
+        Column (
+
+                ){
+            LazyColumn (
+                modifier = Modifier
+                    .fillMaxHeight(0.5f)
+
+                    ){
 
 
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(20.dp)
-            ) {
-                Text(
-                    fontSize = 23.sp,
-                    fontWeight = FontWeight.Bold,
-                    text = "These guests have reservations"
-                )
-            }
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth(),
-                verticalAlignment = Alignment.CenterVertically
-            )
-            {
+                stickyHeader {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(bottom = 5.dp)
+                            .background(Color.White)
+                            .size(width = 440.dp, height = 50.dp),
+                        verticalAlignment = Alignment.CenterVertically
 
-                CheckBoxDemo()
-                Text(
-                    text = "Jim Jeffrey",
-                    fontSize = 16.sp
-                )
-            }
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth(),
-                verticalAlignment = Alignment.CenterVertically
-            )
-            {
+                    ) {
+                        Text(
+                            fontSize = 23.sp,
+                            fontWeight = FontWeight.Bold,
+                            text = "   These guests have reservations"
+                        )
+                    }
+                }
+                item {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth(),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        CheckBoxDemo()
+                        Text(
+                            text = "Jim Jeffrey",
+                            fontSize = 16.sp
+                        )
+                    }
+                }
+                item {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth(),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
 
-                CheckBoxDemo()
-                Text(
-                    text = "Jiminny Cricket",
-                    fontSize = 16.sp
-                )
+                        CheckBoxDemo()
+                        Text(
+                            text = "Jiminny Cricket",
+                            fontSize = 16.sp
+                        )
+                    }
+                }
+                item {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth(),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        CheckBoxDemo()
+                        Text(
+                            text = "Jim Jeffrey",
+                            fontSize = 16.sp
+                        )
+                    }
+                }
+                item {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth(),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        CheckBoxDemo()
+                        Text(
+                            text = "Jim Jeffrey",
+                            fontSize = 16.sp
+                        )
+                    }
+                }
+                item {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth(),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        CheckBoxDemo()
+                        Text(
+                            text = "Jim Jeffrey",
+                            fontSize = 16.sp
+                        )
+                    }
+                }
+                item {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth(),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        CheckBoxDemo()
+                        Text(
+                            text = "Jim Jeffrey",
+                            fontSize = 16.sp
+                        )
+                    }
+                }
+                item {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth(),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        CheckBoxDemo()
+                        Text(
+                            text = "Jim Jeffrey",
+                            fontSize = 16.sp
+                        )
+                    }
+                }
+                item {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth(),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        CheckBoxDemo()
+                        Text(
+                            text = "Jim Jeffrey",
+                            fontSize = 16.sp
+                        )
+                    }
+                }
+                item {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth(),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        CheckBoxDemo()
+                        Text(
+                            text = "Jim Jeffrey",
+                            fontSize = 16.sp
+                        )
+                    }
+                }
+                item {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth(),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        CheckBoxDemo()
+                        Text(
+                            text = "Jim Jeffrey",
+                            fontSize = 16.sp
+                        )
+                    }
+                }
+                item {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth(),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        CheckBoxDemo()
+                        Text(
+                            text = "Jim Jeffrey",
+                            fontSize = 16.sp
+                        )
+                    }
+                }
+                item {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth(),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        CheckBoxDemo()
+                        Text(
+                            text = "Jim Jeffrey",
+                            fontSize = 16.sp
+                        )
+                    }
+                }
+                item {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth(),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        CheckBoxDemo()
+                        Text(
+                            text = "Jim Jeffrey",
+                            fontSize = 16.sp
+                        )
+                    }
+                }
+                item {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth(),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        CheckBoxDemo()
+                        Text(
+                            text = "Jim Jeffrey",
+                            fontSize = 16.sp
+                        )
+                    }
+                }
+                item {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth(),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        CheckBoxDemo()
+                        Text(
+                            text = "Jim Jeffrey",
+                            fontSize = 16.sp
+                        )
+                    }
+                }
+                item {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth(),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        CheckBoxDemo()
+                        Text(
+                            text = "Jim Jeffrey",
+                            fontSize = 16.sp
+                        )
+                    }
+                }
             }
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(20.dp)
-            ) {
-                Text(
-                    fontSize = 23.sp,
-                    fontWeight = FontWeight.Bold,
-                    text = "These guests need reservations"
-                )
-            }
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth(),
-                verticalAlignment = Alignment.CenterVertically
-            )
-            {
 
-                CheckBoxDemo()
-                Text(
-                    text = "Glenda Globson",
-                    fontSize = 16.sp
-                )
-            }
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth(),
-                verticalAlignment = Alignment.CenterVertically
-            )
-            {
 
-                CheckBoxDemo()
-                Text(
-                    text = "Freddy the Frog",
-                    fontSize = 16.sp
-                )
-            }
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-            ) {
-                Icon(
-                    Icons.Filled.Info, null
-                )
-                Text(
-                    text = "At least one Guest in the party must have a reservation. Guests without" +
-                            " reservations must remain in the same booking party in order to enter")
+            LazyColumn {
+
+
+                stickyHeader {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(20.dp)
+                            .weight(1f, fill = false)
+                    ) {
+                        Text(
+                            fontSize = 23.sp,
+                            fontWeight = FontWeight.Bold,
+                            text = "These guests need reservations"
+                        )
+                    }
+                }
+                item {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth(),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        CheckBoxDemo()
+                        Text(
+                            text = "Jim Jeffrey",
+                            fontSize = 16.sp
+                        )
+                    }
+                }
+                item {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth(),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+
+                        CheckBoxDemo()
+                        Text(
+                            text = "Jiminny Cricket",
+                            fontSize = 16.sp
+                        )
+                    }
+                }
+                item {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(20.dp)
+                    ) {
+                        Icon(
+                            Icons.Filled.Info, null
+                        )
+                        Text(
+                            text = "At least one Guest in the party must have a reservation. Guests without" +
+                                    " reservations must remain in the same booking party in order to enter")
+                    }
+                }
             }
         }
+
     }
 }
